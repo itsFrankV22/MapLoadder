@@ -43,9 +43,6 @@ namespace MapLoad
                 _cancellationTokenSource?.Cancel();
                 _cancellationTokenSource = new CancellationTokenSource();
 
-                // Aplicar los buffs
-                ApplyBuffs(args.Player);
-
                 // Iniciar el desbloqueo del mapa
                 UnlockMapAsync(args.Player, _cancellationTokenSource.Token);
                 args.Player.SendMessage("Desbloqueo del mapa en progreso. Por favor, espere.", Color.Yellow);
@@ -56,31 +53,17 @@ namespace MapLoad
             }
         }
 
-        private void ApplyBuffs(TSPlayer player)
-        {
-            // Lista de IDs de buffs a aplicar
-            int[] buffIds = { 230, 11, 9, 57, 187 };
-            int duration = 3600 * 60; // Duración de 1 hora en ticks (60 ticks por segundo)
-
-            foreach (var buffId in buffIds)
-            {
-                player.TPlayer.AddBuff(buffId, duration);
-            }
-
-            player.SendMessage("Buffs aplicados durante 1 hora.", Color.Yellow);
-        }
-
         private async void UnlockMapAsync(TSPlayer player, CancellationToken token)
         {
             var p = player.TPlayer;
             var width = Main.maxTilesX;
             var height = Main.maxTilesY;
-            int tileSize = 45; // Tamaño del área que se recorrerá en cada teletransportación
-            int sectionWidth = 40; // Anchura para comenzar una nueva columna
+            int tileSize = 5; // Tamaño del área que se recorrerá en cada teletransportación
+            int sectionWidth = 7; // Anchura para comenzar una nueva columna
 
             try
             {
-                for (int x = 0; x < width; x += tileSize + sectionWidth)
+                for (int x = 0; x < width; x += sectionWidth)
                 {
                     for (int y = 0; y < height; y += tileSize)
                     {
@@ -94,12 +77,12 @@ namespace MapLoad
                         // Teletransportar al jugador
                         player.Teleport(tx * 16, ty * 16, 0);
 
-                        // Esperar 2 segundos antes de continuar
-                        await Task.Delay(2000, token);
+                        // Esperar 300 ms antes de continuar
+                        await Task.Delay(300, token);
                     }
 
-                    // Mover el área de exploración 40 bloques a la derecha para la siguiente columna
-                    p.position.X += sectionWidth * 16;
+                    // Mover el área de exploración para la siguiente columna
+                    p.position.X = x * 16; // Asegurarse de que no se pase de 7 de ancho
                 }
 
                 // Teletransportar al punto de spawn
@@ -109,7 +92,7 @@ namespace MapLoad
             catch (OperationCanceledException)
             {
                 // Manejar la cancelación del proceso
-                player.SendMessage("El proceso de desbloqueo ha sido cancelado.", Color.Red);
+                player.SendMessage("El proceso de escaneo ha sido cancelado.", Color.Red);
             }
         }
     }
