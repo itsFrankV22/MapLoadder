@@ -1,0 +1,13 @@
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\bin\Debug\net6.0\HttpServer.dll
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\bin\Debug\net6.0\MapLoad.deps.json
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\bin\Debug\net6.0\MapLoad.dll
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\bin\Debug\net6.0\MapLoad.pdb
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\MapLoad.csproj.AssemblyReference.cache
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\MapLoad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\MapLoad.AssemblyInfoInputs.cache
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\MapLoad.AssemblyInfo.cs
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\MapLoad.csproj.CoreCompileInputs.cache
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\MapLoad.dll
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\refint\MapLoad.dll
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\MapLoad.pdb
+C:\Users\FrankV22\source\repos\MapLoad\MapLoad\obj\Debug\net6.0\ref\MapLoad.dll
