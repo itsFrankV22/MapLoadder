@@ -15,7 +15,7 @@ If you speak another language, please ask [README_ENGLISH.md](https://github.com
 ### `/map load`
 
 > [!WARNING]
-> Antes de usar "/map load" preparate poniendo "/godmode" y una momtura que anule la gravedad para que no caigas mientras exploras
+> Antes de usar "/map load" preparate poniendo "/godmode" y una montura que anule la gravedad para que no caigas mientras exploras
 > Se recomienda aplicarse buffos como brillo y mazcotas de luz para mejor reconocimiento
 
 Este comando inicia el proceso de desbloqueo del mapa para el jugador que lo ejecuta. Al usar este comando:
