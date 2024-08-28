@@ -2,7 +2,7 @@
 Por FrankV22
 MapLoad es un plugin para TShock que permite desbloquear el mapa del jugador y aplicar buffs durante el proceso. A continuación, se detalla cómo usar el plugin y los permisos necesarios.
 
-If you speak another language, please ask [README_ENGLISH.md](...)
+If you speak another language, please ask [README_ENGLISH.md](https://github.com/itsFrankV22/MapLoadder/blob/main/README.md)
 
 ## Permisos y Comandos
 
